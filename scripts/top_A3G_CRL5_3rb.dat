@@ -1,0 +1,33 @@
+|molecule_name|color|fasta_fn|fasta_id|pdb_fn|chain|residue_range|pdb_offset|bead_size|em_residues_per_gaussian|rigid_body|super_rigid_body|chain_of_super_rigid_bodies|
+
+|CBFB |turquoise      |CBFB.fasta |CBFB |CRL5_mod.pdb  |D|1,END  |0  |5  |  |1 |   | ||
+
+|Vif  |light green    |Vif.fasta  |Vif  |BEADS         | |1,5    |0  |1  |  |  |   | ||
+|Vif  |light green    |Vif.fasta  |Vif  |CRL5_mod.pdb  |E|6,154  |0  |1  |  |1 |   | ||
+|Vif  |light green    |Vif.fasta  |Vif  |BEADS         | |155,165|0  |1  |  |  |   | ||
+|Vif  |light green    |Vif.fasta  |Vif  |CRL5_mod.pdb  |E|166,END|0  |1  |  |1 |   | ||
+
+|EloB |cornflower blue|EloB.fasta |EloB |CRL5_mod.pdb  |B|1,105  |0  |1  |  |1 |   | ||
+|EloB |cornflower blue|EloB.fasta |EloB |BEADS         | |106,END|0  |5  |  |  |   | ||
+
+|EloC |plum           |EloC.fasta |EloC |BEADS         |C|1,16   |0  |5  |  |1 |   | ||
+|EloC |plum           |EloC.fasta |EloC |CRL5_mod.pdb  |C|17,END |0  |1  |  |1 |   | ||
+
+|CUL5 |gold           |Cul5.fasta |Cul5 |CRL5_mod.pdb  |A|1,302  |0  |1  |  |1 |   | ||
+|CUL5 |gold           |Cul5.fasta |Cul5 |BEADS         | |303,307|0  |1  |  |  |   | ||
+|CUL5 |gold           |Cul5.fasta |Cul5 |CRL5_mod.pdb  |A|308,382|0  |1  |  |1 |   | ||
+|CUL5 |gold           |Cul5.fasta |Cul5 |BEADS         | |383,404|0  |1  |  |  |   | ||
+|CUL5 |gold           |Cul5.fasta |Cul5 |CRL5_mod.pdb  |A|405,END|0  |1  |  |1 |   | ||
+
+|Rbx2 |orange         |Rbx2.fasta |Rbx2 |BEADS         | |1,26   |0  |5  |  |  |   | ||
+|Rbx2 |orange         |Rbx2.fasta |Rbx2 |CRL5_mod.pdb  |F|27,END |0  |1  |  |1 |   | ||
+
+|A3G  |coral          |A3G.fasta  |A3G |A3G_nter.pdb   |A|1,194  |0  |1  |0 |2 |5  | ||
+|A3G  |coral          |A3G.fasta  |A3G |BEADS          | |195,199|0  |1  |0 |  |5  | ||
+|A3G  |coral          |A3G.fasta  |A3G |A3G_cter.pdb   |A|200,243|0  |1  |0 |3 |5  | ||
+|A3G  |coral          |A3G.fasta  |A3G |BEADS          | |244,257|0  |1  |0 |  |5  | ||
+|A3G  |coral          |A3G.fasta  |A3G |A3G_cter.pdb   |A|258,END|0  |1  |0 |3 |5  | ||
+
+
+
+
