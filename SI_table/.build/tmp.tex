@@ -1,0 +1,143 @@
+\documentclass[8pt,a4paper]{article} 
+\usepackage{tabularx}
+\usepackage{caption}
+\usepackage{longtable}
+\usepackage[margin=0.2in]{geometry}
+\fontfamily{phv}\fontseries{mc}\selectfont
+\begin{document}
+
+\setcounter{table}{7}
+
+\begin{longtable}{ p{.48\textwidth} | p{.48\textwidth} } 
+\caption{Summary of Integrative Structure Determination of A3G\_Vif\_CRL5 with flexible representation}
+  
+  &  \\
+  \textbf{1) Gathering information} & \\
+    \hline
+
+            \textit{Prior models} & CBFB: comparative model, template 4N9F:F\\
+            & Vif: comparative model, template 4N9F:G \\
+            & EloB: comparative model, template 4N9F:D \\
+            & EloC: comparative model, template 4N9F:E \\
+            & CUL5: comparative model, template 4N9F:C \\
+            & Rbx2: comparative model, template 1LDJ:B \\
+            & A3G: comparative model, template 5K81:E \\
+                \textit{Physical principles and statistical preferences} & Excluded volume\\
+            & Sequence connectivity \\
+                \textit{Experimental data} & 131 DSSO chemical cross-links\\
+            & Predicted residue-protein contacts from mutagenesis studies; A3G residues 126-132 and Vif residues 40-45 \\
+          
+    &  \\
+    \normalsize{\textbf{2) Representing the system}} & \\
+    \hline
+    
+            \textit{Composition (number of copies)} & A3G: 1\\
+            & CBFB: 1 \\
+            & CUL5: 1 \\
+            & EloB: 1 \\
+            & EloC: 1 \\
+            & Rbx2: 1 \\
+            & Vif: 1 \\
+                \textit{Atomic (structured) components} & A3G: 6-194, 200-243, 258-380\\
+            & CBFB: 1-156 \\
+            & CUL5: 11-302, 308-382, 405-515, 521-568, 574-687, 695-780 \\
+            & EloB: 1-105 \\
+            & EloC: 17-112 \\
+            & Rbx2: 27-113 \\
+            & Vif: 6-154, 166-175 \\
+                \textit{Unstructured components} & A3G: 1-5, 195-199, 244-257, 381-384\\
+            & CBFB: 157-182 \\
+            & CUL5: 1-10, 303-307, 383-404, 516-520, 569-573, 688-694 \\
+            & EloB: 106-161 \\
+            & EloC: 1-16 \\
+            & Rbx2: 1-26 \\
+            & Vif: 1-5, 155-165 \\
+                \textit{Resolution of structured components} & 1 [R1], 10 [R10] residues per bead\\
+                \textit{Resolution of unstructured components} & 5 [R5] residues per bead\\
+                \textit{Structural coverage} & 89.02 \%\\
+                \textit{Rigid body (RB) definitions} & RB1: CBFB$_{1-156}$\\
+            & RB2: Vif$_{6-154}$,Vif$_{166-175}$ \\
+            & RB3: EloB$_{1-105}$ \\
+            & RB4: EloC$_{17-112}$ \\
+            & RB5: CUL5$_{11-302}$ \\
+            & RB6: CUL5$_{308-382}$ \\
+            & RB7: CUL5$_{405-515}$ \\
+            & RB8: CUL5$_{521-568}$ \\
+            & RB9: CUL5$_{574-687}$ \\
+            & RB10: CUL5$_{695-780}$ \\
+            & RB11: Rbx2$_{27-113}$ \\
+            & RB12: A3G$_{6-194}$ \\
+            & RB13: A3G$_{200-243}$,A3G$_{258-380}$ \\
+                \textit{Spatial restraints encoded into scoring function} & Excluded volume; applied to the R1 representation\\
+            & Sequence connectivity; applied to the R1 representation \\
+            & Cross-link restraints; applied to the R1 representation \\
+            & Residue-protein proximity restraints; applied to the R1 representation \\
+            & Structural equivalence distance restraints; applied to the R1 representation \\
+        
+
+   &  \\
+    \normalsize{\textbf{3) Structural Sampling}} & \\
+    \hline
+            \textit{Sampling method} & Replica Exchange Gibbs sampling, based on Metropolis Monte Carlo\\
+                \textit{Replica exchange temperature range} & 1.0 - 2.5\\
+                \textit{Number of replicas} & 8\\
+                \textit{Number of runs} & 50\\
+                \textit{Number of structures generated} & 3000000\\
+                \textit{Movers for flexible string of bead} & Random translation up to 4.0 \AA\\
+                \textit{CPU time} & 6 hours on 20 processors\\
+        
+   &  \\
+  \normalsize{\textbf{4) Validating the model}} & \\
+    \hline
+   \textbf{Models selected for validation} & \\
+    \hline
+          \textit{Number of models after equilibration} & 3000000\\
+                \textit{Number of models that satisfy the input information} & 203100\\
+                \textit{Number of structures in samples A/B} & 102925/100175\\
+                \textit{p-value of non-parametric Kolmogorov-Smirnov two-sample test} & 0.05 (threshold p-value $>$ 0.05)\\
+                \textit{Kolmogorov-Smirnov two-sample test statistic, D} & 1.0\\
+           \hline
+    
+    \textbf{Thoroughness of the structural sampling} & \\
+    \hline
+          \textit{Sampling precision} & 28.98 \AA \\
+                \textit{Homogeneity of proportions $\chi^2$ test (p-value)/Cramer’s V value} & 0.000/0.043 (thresholds: p-value$>$0.05 OR Cramer's V$<$0.1)\\
+                \textit{Number of clusters} & 1\\
+                \textit{Cluster populations} & cluster 1 : 98.7 $\%$\\
+                \textit{Cluster precisions} & cluster 1 : 19.85 \AA\\
+                \textit{Average cross-correlation between localization probability densities of samples A and B} & cluster 1: 0.9\\
+           \hline
+  
+  \textbf{Validation by information used for modeling} & \\
+  \hline
+          \textit{Percent of sequence connectivity restraints satisfied per structure} & 99 \%\\
+                \textit{Percent cross-link restraints satisfied by ensemble} & 99 \%\\
+                \textit{Percent of residue-protein proximity restraints satisfied by ensemble} & 98 \%\\
+                \textit{Percent of excluded volume restraints satisfied per structure} & 97 \%\\
+          &  \\
+  
+  \textbf{5) Benchmark} & \\
+  \hline
+    
+   &  \\
+  \normalsize{\textbf{6) Software and data availability}} & \\
+    \hline
+   \textbf{Software} & \\
+   \hline
+             \textit{Modeling programs} & IMP PMI module, version develop-af393bce43\\
+             & Integrative Modeling Platform (IMP), version develop-af393bce43 \\
+             & MODELLER, version 9.20 \\
+             & MODELLER, version 9.19 \\
+                  \textit{Modeling scripts} & https://github.com/integrativemodeling/A3G\_Vif\_CRL5\\
+                  \textit{Homology detection and structure prediction} & HHPred, version 2.0.16\\
+                  \textit{Visualization and plotting} & UCSF Chimera, version 1.10\\
+             & Matplotlib, version 3.0.3  \\
+          \hline
+
+  \textbf{Data} & \\
+    \hline
+            \textit{PDB-dev accesion code} & TBD\\
+          \hline
+  
+\end{longtable}
+\end{document}
