@@ -1,0 +1,104 @@
+import pandas as pd
+import numpy as np
+import os, sys
+from sys import exit
+import pprint
+import random
+import copy
+import glob
+
+class clustal_to_mat:
+    def __init__(self, aln, score):
+        self.aln = aln
+        self.score = score
+    
+        h_name = aln.split('_')[-1][0]
+        y_name = aln.split('_')[-1][1]
+        print h_name, y_name
+
+        self.seqH, self.seqY = self.read_clustal(self.aln)
+        self.scoH, self.scoY = self.read_clustal(self.score)
+    
+                 
+        self.ch1 = h_name
+        self.ch2 = y_name
+        
+        self.file_out = 'mat_'+h_name+'_'+y_name+'.align'
+        
+        self.to_mat()
+    
+    def read_clustal(self,file):
+        # Read Alignment file and score file in clustalW foarmat
+        # return human nad yeast dictionary
+        seqH = {}
+        seqY = {}
+
+        for line in open(file,'r'):
+            vals = line.split()
+            if len(vals) == 2 and vals[0] != 'cons':
+                id = vals[0]
+                print id
+                seq  = vals[1]
+                spe = id.split('_')[1]
+                if spe == 'D' or spe == 'G':
+                    if spe not in seqH.keys():
+                        seqH[spe] = list(seq.split('\n')[0])
+                    else:
+                        seqH[spe] += list(seq.split('\n')[0])
+                if spe == 'P' or spe == 'S':
+                    if spe not in seqY.keys():
+                        seqY[spe] = list(seq.split('\n')[0])
+                    else:
+                        seqY[spe] += list(seq.split('\n')[0])
+    
+        return seqH, seqY
+        
+    def to_mat(self):
+        D1 = self.seqH.values()[0]
+        D2 = self.seqY.values()[0]
+        
+        D = np.array([D1,D2])
+        
+        S1 = self.scoH.values()[0]
+        S2 = self.scoY.values()[0]
+        
+        r1,r2 = 0, 0
+        align = []
+        align_high = []
+        for i in range(len(D[0])):
+            if D[0][i] != '-':
+                r1 = r1 + 1
+            if D[1][i] != '-':
+                r2 = r2 + 1
+            if D[0][i] != '-' and D[1][i] != '-': 
+                align.append([D[0][i],self.ch1,r1,S1[i],D[1][i],self.ch2,r2,S2[i]])
+            if D[0][i] != '-' and D[1][i] != '-' and (int(S1[i]) >= 4 and int(S2[i]) >= 4): 
+                align_high.append([D[0][i],self.ch1,r1,S1[i],D[1][i],self.ch2,r2,S2[i]])
+                
+        np.savetxt(self.file_out,np.array(align),fmt='%s')
+        np.savetxt(self.file_out+'.high',np.array(align_high),fmt='%s')
+############################################
+
+# Chains dictionary
+scProts_dic = {'p1':'D','p2':'G'}
+
+spProts_dic = {'q1':'P','q2':'S'}
+
+#aln_files = ['result.clustalw_aln_GS','result.clustalw_aln_DP']
+aln_files = ['result.clustalw_aln_DP','result.clustalw_aln_GS']
+
+for aln in aln_files:
+    print '----------------------'
+    print aln
+    sc = aln.split('_')
+    score = 'result.score_ascii_'+sc[-1]
+    print score
+    clustal_to_mat(aln,score)
+
+#aln = '/Users/iecheverria/Dropbox/Apps/T-Coffee/results/Nup107/result.clustalw_aln'
+#score = '/Users/iecheverria/Dropbox/Apps/T-Coffee/results/Nup107/result.score_ascii'
+
+#
+
+
+# Convert into matrix for IMP
