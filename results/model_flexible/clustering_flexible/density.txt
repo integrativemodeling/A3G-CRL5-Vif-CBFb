@@ -1,0 +1,1 @@
+density_custom_ranges={"CBFB":["CBFB"],"EloB":["EloB"],"EloC":["EloC"],"Vif":["Vif"],"CUL5_1":[(1,302,"CUL5")],"CUL5_2":[(308,382,"CUL5")],"CUL5_3":[(405,515,"CUL5")],"CUL5_4":[(521,780,"CUL5")],"Rbx2":[(27,113,"Rbx2")],"A3G":["A3G"],"A3G_1":[(1,192,"A3G")],"A3G_2":[(207,384,"A3G")],"All":["CBFB","EloB","EloC","Vif","CUL5","Rbx2","A3G"]}

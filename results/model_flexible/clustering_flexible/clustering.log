@@ -1,0 +1,622 @@
+
+* FILE: 
+  Records:           2
+  Out of range:      0
+  Invalid:           0
+  Column headers:    0
+  Blank:             0
+  Data Blocks:       1
+
+* COLUMN: 
+  Mean:               0.5000
+  Std Dev:            0.5000
+  Sample StdDev:      0.7071
+  Skewness:           0.0000
+  Kurtosis:           1.0000
+  Avg Dev:            0.5000
+  Sum:                1.0000
+  Sum Sq.:            1.0000
+
+  Mean Err.:          0.3536
+  Std Dev Err.:       0.2500
+  Skewness Err.:      1.7321
+  Kurtosis Err.:      3.4641
+
+  Minimum:            0.0000 [0]
+  Maximum:            1.0000 [1]
+  Quartile:           0.0000 
+  Median:             0.5000 
+  Quartile:           1.0000 
+
+
+* FILE: 
+  Records:           2
+  Out of range:      0
+  Invalid:           0
+  Column headers:    0
+  Blank:             0
+  Data Blocks:       1
+
+* COLUMN: 
+  Mean:            3753.0000
+  Std Dev:         3716.0000
+  Sample StdDev:   5255.2176
+  Skewness:           0.0000
+  Kurtosis:           1.0000
+  Avg Dev:         3716.0000
+  Sum:             7506.0000
+  Sum Sq.:       5.57873e+07
+
+  Mean Err.:       2627.6088
+  Std Dev Err.:    1858.0000
+  Skewness Err.:      1.7321
+  Kurtosis Err.:      3.4641
+
+  Minimum:           37.0000 [1]
+  Maximum:         7469.0000 [0]
+  Quartile:          37.0000 
+  Median:          3753.0000 
+  Quartile:        7469.0000 
+
+
+* FILE: 
+  Records:           2
+  Out of range:      0
+  Invalid:           0
+  Column headers:    0
+  Blank:             0
+  Data Blocks:       1
+
+* COLUMN: 
+  Mean:            3725.0000
+  Std Dev:         3626.0000
+  Sample StdDev:   5127.9384
+  Skewness:           0.0000
+  Kurtosis:           1.0000
+  Avg Dev:         3626.0000
+  Sum:             7450.0000
+  Sum Sq.:       5.40470e+07
+
+  Mean Err.:       2563.9692
+  Std Dev Err.:    1813.0000
+  Skewness Err.:      1.7321
+  Kurtosis Err.:      3.4641
+
+  Minimum:           99.0000 [1]
+  Maximum:         7351.0000 [0]
+  Quartile:          99.0000 
+  Median:          3725.0000 
+  Quartile:        7351.0000 
+
+
+* FILE: 
+  Records:           1
+  Out of range:      0
+  Invalid:           0
+  Column headers:    0
+  Blank:             1
+  Data Blocks:       1
+
+* COLUMN: 
+  Mean:               0.0000
+  Std Dev:            0.0000
+  Sample StdDev:   undefined
+  Skewness:        undefined
+  Kurtosis:        undefined
+  Avg Dev:            0.0000
+  Sum:                0.0000
+  Sum Sq.:            0.0000
+
+  Mean Err.:          0.0000
+  Std Dev Err.:       0.0000
+  Skewness Err.:      2.4495
+  Kurtosis Err.:      4.8990
+
+  Minimum:            0.0000 [0]
+  Maximum:            0.0000 [0]
+  Quartile:           0.0000 
+  Median:             0.0000 
+  Quartile:           0.0000 
+
+
+* FILE: 
+  Records:           1
+  Out of range:      0
+  Invalid:           0
+  Column headers:    0
+  Blank:             1
+  Data Blocks:       1
+
+* COLUMN: 
+  Mean:               0.0430
+  Std Dev:            0.0000
+  Sample StdDev:   undefined
+  Skewness:        undefined
+  Kurtosis:        undefined
+  Avg Dev:            0.0000
+  Sum:                0.0430
+  Sum Sq.:            0.0018
+
+  Mean Err.:          0.0000
+  Std Dev Err.:       0.0000
+  Skewness Err.:      2.4495
+  Kurtosis Err.:      4.8990
+
+  Minimum:            0.0430 [0]
+  Maximum:            0.0430 [0]
+  Quartile:           0.0430 
+  Median:             0.0430 
+  Quartile:           0.0430 
+
+
+* FILE: 
+  Records:           16
+  Out of range:       0
+  Invalid:            0
+  Column headers:     0
+  Blank:              0
+  Data Blocks:        1
+
+* COLUMN: 
+  Mean:              27.4778
+  Std Dev:           13.8293
+  Sample StdDev:     14.2829
+  Skewness:           0.0000
+  Kurtosis:           1.7906
+  Avg Dev:           12.0000
+  Sum:              439.6441
+  Sum Sq.:        15140.4337
+
+  Mean Err.:          3.4573
+  Std Dev Err.:       2.4447
+  Skewness Err.:      0.6124
+  Kurtosis Err.:      1.2247
+
+  Minimum:            4.9778 [ 0]
+  Maximum:           49.9778 [15]
+  Quartile:          15.4778 
+  Median:            27.4778 
+  Quartile:          39.4778 
+
+
+* FILE: 
+  Records:           1
+  Out of range:      0
+  Invalid:           0
+  Column headers:    0
+  Blank:             1
+  Data Blocks:       1
+
+* COLUMN: 
+  Mean:              28.9780
+  Std Dev:            0.0000
+  Sample StdDev:   undefined
+  Skewness:        undefined
+  Kurtosis:        undefined
+  Avg Dev:            0.0000
+  Sum:               28.9780
+  Sum Sq.:          839.7245
+
+  Mean Err.:          0.0000
+  Std Dev Err.:       0.0000
+  Skewness Err.:      2.4495
+  Kurtosis Err.:      4.8990
+
+  Minimum:           28.9780 [0]
+  Maximum:           28.9780 [0]
+  Quartile:          28.9780 
+  Median:            28.9780 
+  Quartile:          28.9780 
+
+
+* FILE: 
+  Records:           100
+  Out of range:        0
+  Invalid:             0
+  Column headers:      0
+  Blank:               0
+  Data Blocks:         1
+
+* COLUMN: 
+  Mean:             939.6845
+  Std Dev:           24.7369
+  Sample StdDev:     24.8616
+  Skewness:      -1.03153e-14
+  Kurtosis:           1.7998
+  Avg Dev:           21.4239
+  Sum:            93968.4525
+  Sum Sq.:       8.83619e+07
+
+  Mean Err.:          2.4737
+  Std Dev Err.:       1.7492
+  Skewness Err.:      0.2449
+  Kurtosis Err.:      0.4899
+
+  Minimum:          897.2652 [  0]
+  Maximum:          982.1038 [ 99]
+  Quartile:         918.2606 
+  Median:           939.6845 
+  Quartile:         961.1084 
+
+
+* FILE: 
+  Records:           100
+  Out of range:        0
+  Invalid:             0
+  Column headers:      0
+  Blank:               0
+  Data Blocks:         1
+
+* COLUMN: 
+  Mean:             935.4573
+  Std Dev:           23.3827
+  Sample StdDev:     23.5005
+  Skewness:      1.17182e-14
+  Kurtosis:           1.7998
+  Avg Dev:           20.2511
+  Sum:            93545.7300
+  Sum Sq.:       8.75627e+07
+
+  Mean Err.:          2.3383
+  Std Dev Err.:       1.6534
+  Skewness Err.:      0.2449
+  Kurtosis Err.:      0.4899
+
+  Minimum:          895.3602 [  0]
+  Maximum:          975.5544 [ 99]
+  Quartile:         915.2062 
+  Median:           935.4573 
+  Quartile:         955.7084 
+
+
+* FILE: 
+  Records:           100
+  Out of range:        0
+  Invalid:             0
+  Column headers:      0
+  Blank:               0
+  Data Blocks:         1
+
+* COLUMN: 
+  Mean:              75.5000
+  Std Dev:           82.7430
+  Sample StdDev:     83.1599
+  Skewness:           0.7698
+  Kurtosis:           2.0616
+  Avg Dev:           72.7700
+  Sum:             7550.0000
+  Sum Sq.:       1.25467e+06
+
+  Mean Err.:          8.2743
+  Std Dev Err.:       5.8508
+  Skewness Err.:      0.2449
+  Kurtosis Err.:      0.4899
+
+  Minimum:            0.0000 [  1]
+  Maximum:          254.0000 [ 39]
+  Quartile:           4.0000 
+  Median:            37.5000 
+  Quartile:         150.0000 
+
+
+* FILE: 
+  Records:           100
+  Out of range:        0
+  Invalid:             0
+  Column headers:      0
+  Blank:               0
+  Data Blocks:         1
+
+* COLUMN: 
+  Mean:              74.5000
+  Std Dev:           79.6777
+  Sample StdDev:     80.0791
+  Skewness:           0.7507
+  Kurtosis:           2.0408
+  Avg Dev:           70.1500
+  Sum:             7450.0000
+  Sum Sq.:       1.18988e+06
+
+  Mean Err.:          7.9678
+  Std Dev Err.:       5.6341
+  Skewness Err.:      0.2449
+  Kurtosis Err.:      0.4899
+
+  Minimum:            0.0000 [  1]
+  Maximum:          237.0000 [ 48]
+  Quartile:           5.0000 
+  Median:            36.0000 
+  Quartile:         138.0000 
+
+
+* FILE: 
+  Records:           1
+  Out of range:      0
+  Invalid:           0
+  Column headers:    0
+  Blank:             0
+  Data Blocks:       1
+
+* COLUMN: 
+  Mean:               1.0000
+  Std Dev:            0.0000
+  Sample StdDev:   undefined
+  Skewness:        undefined
+  Kurtosis:        undefined
+  Avg Dev:            0.0000
+  Sum:                1.0000
+  Sum Sq.:            1.0000
+
+  Mean Err.:          0.0000
+  Std Dev Err.:       0.0000
+  Skewness Err.:      2.4495
+  Kurtosis Err.:      4.8990
+
+  Minimum:            1.0000 [0]
+  Maximum:            1.0000 [0]
+  Quartile:           1.0000 
+  Median:             1.0000 
+  Quartile:           1.0000 
+
+
+* FILE: 
+  Records:           1
+  Out of range:      0
+  Invalid:           0
+  Column headers:    0
+  Blank:             0
+  Data Blocks:       1
+
+* COLUMN: 
+  Mean:               0.0499
+  Std Dev:            0.0000
+  Sample StdDev:   undefined
+  Skewness:        undefined
+  Kurtosis:        undefined
+  Avg Dev:            0.0000
+  Sum:                0.0499
+  Sum Sq.:            0.0025
+
+  Mean Err.:          0.0000
+  Std Dev Err.:       0.0000
+  Skewness Err.:      2.4495
+  Kurtosis Err.:      4.8990
+
+  Minimum:            0.0499 [0]
+  Maximum:            0.0499 [0]
+  Quartile:           0.0499 
+  Median:             0.0499 
+  Quartile:           0.0499 
+
+
+* FILE: 
+  Records:           10
+  Out of range:       0
+  Invalid:            0
+  Column headers:     0
+  Blank:              0
+  Data Blocks:        1
+
+* COLUMN: 
+  Mean:            8250.0000
+  Std Dev:         4308.4220
+  Sample StdDev:   4541.4755
+  Skewness:           0.0000
+  Kurtosis:           1.7758
+  Avg Dev:         3750.0000
+  Sum:            82500.0000
+  Sum Sq.:       8.66250e+08
+
+  Mean Err.:       1362.4427
+  Std Dev Err.:     963.3924
+  Skewness Err.:      0.7746
+  Kurtosis Err.:      1.5492
+
+  Minimum:         1500.0000 [ 0]
+  Maximum:        15000.0000 [ 9]
+  Quartile:        4500.0000 
+  Median:          8250.0000 
+  Quartile:       12000.0000 
+
+
+* FILE: 
+  Records:           10
+  Out of range:       0
+  Invalid:            0
+  Column headers:     0
+  Blank:              0
+  Data Blocks:        1
+
+* COLUMN: 
+  Mean:             897.0192
+  Std Dev:            1.5009
+  Sample StdDev:      1.5821
+  Skewness:           0.9806
+  Kurtosis:           3.0261
+  Avg Dev:            1.1972
+  Sum:             8970.1917
+  Sum Sq.:       8.04646e+06
+
+  Mean Err.:          0.4746
+  Std Dev Err.:       0.3356
+  Skewness Err.:      0.7746
+  Kurtosis Err.:      1.5492
+
+  Minimum:          895.3602 [ 9]
+  Maximum:          900.3930 [ 0]
+  Quartile:         895.7247 
+  Median:           896.6619 
+  Quartile:         897.7743 
+
+Getting top scoring models at subsets of size: [1500, 3000, 4500, 6000, 7500, 9000, 10500, 12000, 13500, 15000]
+Opening RMF file: /home/ignacia/Research/HARC/Vif/mod_A3G_occams_A3G_Vif1_v12//analys/A_models_clust-1.rmf3 with 7550 frames
+  -- Opening frame 0 of 7550
+  -- Opening frame 100 of 7550
+  -- Opening frame 200 of 7550
+  -- Opening frame 300 of 7550
+  -- Opening frame 400 of 7550
+  -- Opening frame 500 of 7550
+  -- Opening frame 600 of 7550
+  -- Opening frame 700 of 7550
+  -- Opening frame 800 of 7550
+  -- Opening frame 900 of 7550
+  -- Opening frame 1000 of 7550
+  -- Opening frame 1100 of 7550
+  -- Opening frame 1200 of 7550
+  -- Opening frame 1300 of 7550
+  -- Opening frame 1400 of 7550
+  -- Opening frame 1500 of 7550
+  -- Opening frame 1600 of 7550
+  -- Opening frame 1700 of 7550
+  -- Opening frame 1800 of 7550
+  -- Opening frame 1900 of 7550
+  -- Opening frame 2000 of 7550
+  -- Opening frame 2100 of 7550
+  -- Opening frame 2200 of 7550
+  -- Opening frame 2300 of 7550
+  -- Opening frame 2400 of 7550
+  -- Opening frame 2500 of 7550
+  -- Opening frame 2600 of 7550
+  -- Opening frame 2700 of 7550
+  -- Opening frame 2800 of 7550
+  -- Opening frame 2900 of 7550
+  -- Opening frame 3000 of 7550
+  -- Opening frame 3100 of 7550
+  -- Opening frame 3200 of 7550
+  -- Opening frame 3300 of 7550
+  -- Opening frame 3400 of 7550
+  -- Opening frame 3500 of 7550
+  -- Opening frame 3600 of 7550
+  -- Opening frame 3700 of 7550
+  -- Opening frame 3800 of 7550
+  -- Opening frame 3900 of 7550
+  -- Opening frame 4000 of 7550
+  -- Opening frame 4100 of 7550
+  -- Opening frame 4200 of 7550
+  -- Opening frame 4300 of 7550
+  -- Opening frame 4400 of 7550
+  -- Opening frame 4500 of 7550
+  -- Opening frame 4600 of 7550
+  -- Opening frame 4700 of 7550
+  -- Opening frame 4800 of 7550
+  -- Opening frame 4900 of 7550
+  -- Opening frame 5000 of 7550
+  -- Opening frame 5100 of 7550
+  -- Opening frame 5200 of 7550
+  -- Opening frame 5300 of 7550
+  -- Opening frame 5400 of 7550
+  -- Opening frame 5500 of 7550
+  -- Opening frame 5600 of 7550
+  -- Opening frame 5700 of 7550
+  -- Opening frame 5800 of 7550
+  -- Opening frame 5900 of 7550
+  -- Opening frame 6000 of 7550
+  -- Opening frame 6100 of 7550
+  -- Opening frame 6200 of 7550
+  -- Opening frame 6300 of 7550
+  -- Opening frame 6400 of 7550
+  -- Opening frame 6500 of 7550
+  -- Opening frame 6600 of 7550
+  -- Opening frame 6700 of 7550
+  -- Opening frame 6800 of 7550
+  -- Opening frame 6900 of 7550
+  -- Opening frame 7000 of 7550
+  -- Opening frame 7100 of 7550
+  -- Opening frame 7200 of 7550
+  -- Opening frame 7300 of 7550
+  -- Opening frame 7400 of 7550
+  -- Opening frame 7500 of 7550
+Opening RMF file: /home/ignacia/Research/HARC/Vif/mod_A3G_occams_A3G_Vif1_v12//analys/B_models_clust-1.rmf3 with 7450 frames
+  -- Opening frame 0 of 7450
+  -- Opening frame 100 of 7450
+  -- Opening frame 200 of 7450
+  -- Opening frame 300 of 7450
+  -- Opening frame 400 of 7450
+  -- Opening frame 500 of 7450
+  -- Opening frame 600 of 7450
+  -- Opening frame 700 of 7450
+  -- Opening frame 800 of 7450
+  -- Opening frame 900 of 7450
+  -- Opening frame 1000 of 7450
+  -- Opening frame 1100 of 7450
+  -- Opening frame 1200 of 7450
+  -- Opening frame 1300 of 7450
+  -- Opening frame 1400 of 7450
+  -- Opening frame 1500 of 7450
+  -- Opening frame 1600 of 7450
+  -- Opening frame 1700 of 7450
+  -- Opening frame 1800 of 7450
+  -- Opening frame 1900 of 7450
+  -- Opening frame 2000 of 7450
+  -- Opening frame 2100 of 7450
+  -- Opening frame 2200 of 7450
+  -- Opening frame 2300 of 7450
+  -- Opening frame 2400 of 7450
+  -- Opening frame 2500 of 7450
+  -- Opening frame 2600 of 7450
+  -- Opening frame 2700 of 7450
+  -- Opening frame 2800 of 7450
+  -- Opening frame 2900 of 7450
+  -- Opening frame 3000 of 7450
+  -- Opening frame 3100 of 7450
+  -- Opening frame 3200 of 7450
+  -- Opening frame 3300 of 7450
+  -- Opening frame 3400 of 7450
+  -- Opening frame 3500 of 7450
+  -- Opening frame 3600 of 7450
+  -- Opening frame 3700 of 7450
+  -- Opening frame 3800 of 7450
+  -- Opening frame 3900 of 7450
+  -- Opening frame 4000 of 7450
+  -- Opening frame 4100 of 7450
+  -- Opening frame 4200 of 7450
+  -- Opening frame 4300 of 7450
+  -- Opening frame 4400 of 7450
+  -- Opening frame 4500 of 7450
+  -- Opening frame 4600 of 7450
+  -- Opening frame 4700 of 7450
+  -- Opening frame 4800 of 7450
+  -- Opening frame 4900 of 7450
+  -- Opening frame 5000 of 7450
+  -- Opening frame 5100 of 7450
+  -- Opening frame 5200 of 7450
+  -- Opening frame 5300 of 7450
+  -- Opening frame 5400 of 7450
+  -- Opening frame 5500 of 7450
+  -- Opening frame 5600 of 7450
+  -- Opening frame 5700 of 7450
+  -- Opening frame 5800 of 7450
+  -- Opening frame 5900 of 7450
+  -- Opening frame 6000 of 7450
+  -- Opening frame 6100 of 7450
+  -- Opening frame 6200 of 7450
+  -- Opening frame 6300 of 7450
+  -- Opening frame 6400 of 7450
+  -- Opening frame 6500 of 7450
+  -- Opening frame 6600 of 7450
+  -- Opening frame 6700 of 7450
+  -- Opening frame 6800 of 7450
+  -- Opening frame 6900 of 7450
+  -- Opening frame 7000 of 7450
+  -- Opening frame 7100 of 7450
+  -- Opening frame 7200 of 7450
+  -- Opening frame 7300 of 7450
+  -- Opening frame 7400 of 7450
+Size of conformation matrix (15000, 1831, 3)
+Mode: cuda Superposition: True Number of cores: 4
+Size of RMSD matrix (flattened): (112492500,)
+Loading matrix data from Distances_Matrix.data.bin ...  Done
+Size of RMSD matrix (unpacked, N x N): (15000, 15000)
+Size of Sample A: 7550  ; Size of Sample B:  7450 ; Total 15000
+Calculating sampling precision
+Minimum and maximum pairwise model distances: 1.9777566 52.71206
+Clustering at thresholds: [ 4.97775662  7.97775662 10.97775662 13.97775662 16.97775662 19.97775662
+ 22.97775662 25.97775662 28.97775662 31.97775662 34.97775662 37.97775662
+ 40.97775662 43.97775662 46.97775662 49.97775662]
+Clustering at threshold 28.978
+Contingency table: [[7469. 7351.]
+ [  37.   99.]]
+gnuplot -e sysname="flex_v12" /home/ignacia/SOFTW/imp-sampcon-0320/pyext/src/../../utilities/gnuplot_scripts/Plot_Cluster_Population.plt
+gnuplot -e sysname="flex_v12" /home/ignacia/SOFTW/imp-sampcon-0320/pyext/src/../../utilities/gnuplot_scripts/Plot_Convergence_NM.plt
+gnuplot -e sysname="flex_v12" /home/ignacia/SOFTW/imp-sampcon-0320/pyext/src/../../utilities/gnuplot_scripts/Plot_Convergence_SD.plt
+gnuplot -e sysname="flex_v12" /home/ignacia/SOFTW/imp-sampcon-0320/pyext/src/../../utilities/gnuplot_scripts/Plot_Convergence_TS.plt
