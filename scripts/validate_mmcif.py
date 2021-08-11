@@ -7,5 +7,5 @@ for dn in 'mmcif_pdbx_v50.dic', 'mmcif_ihm.dic':
      with urllib.request.urlopen(url) as fh:
          d += ihm.dictionary.read(fh)
 
-with open('h3_h4_pEMAP_all.cif') as fh:
+with open('A3G-CRL5-Vif_complex_flexible.cif') as fh:
      d.validate(fh)

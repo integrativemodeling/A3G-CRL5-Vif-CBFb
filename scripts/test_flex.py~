@@ -1,6 +1,6 @@
 ############################################
 # Modeling the A3G-VCBC complex
-# flexible representation.
+# with only three rbs.
 #
 # iecheverria - Sali Lab - UCSF
 ############################################
@@ -19,7 +19,6 @@ import IMP.pmi.restraints.crosslinking
 import IMP.pmi.restraints.basic
 import IMP.pmi.restraints.em
 #import IMP.pmi.restraints.residue_binding
-import IMP.pmi.restraints.occams
 from IMP.pmi.io.crosslink import CrossLinkDataBaseKeywordsConverter
 
 import random
@@ -32,16 +31,15 @@ from sys import exit
 
 ###################### SYSTEM SETUP #####################
 
-include_amg_distance_restraint = False
-include_Occams = True
+include_amg_distance_restraint = True
 top_dir = '../'
 
 mdl = IMP.Model()
 
 ###############################
-# Structure to model
+# Species 1
 ###############################
-top_spec1 = 'top_A3G_CRL5_flex.dat'
+top_spec1 = 'top_A3G_CRL5_3rb.dat'
 reader_spec1 = IMP.pmi.topology.TopologyReader(top_spec1,
                                                pdb_dir = top_dir+'data/',
                                                fasta_dir = top_dir+'data/')
@@ -49,44 +47,17 @@ reader_spec1 = IMP.pmi.topology.TopologyReader(top_spec1,
 bs = IMP.pmi.macros.BuildSystem(mdl,
                                 resolutions=[1,10])
 
-###############################
-# Reference structure
-###############################
-if include_Occams:
-    top_spec2 = 'top_CRL5_temp.dat'
-    reader_spec2 = IMP.pmi.topology.TopologyReader(top_spec2,
-                                                   pdb_dir = top_dir+'data/',
-                                                   fasta_dir = top_dir+'data/')
-
-
-    bs_spec2 = IMP.pmi.macros.BuildSystem(mdl,
-                                          resolutions=[1,10])
-
 ##############################
 # Generate mmcif file
 ##############################
     
 if '--mmcif' in sys.argv:
-    import ihm
     # Record the modeling protocol to an mmCIF file
-    title = """Characterization of a A3G-VifHIV-1-CRL5-CBFb structure using a 
-             cross-linking mass spectrometry pipeline for integrative modeling 
-             of host-pathogen complexes"""
-    authors = ['Robyn M Kaake', 'Ignacia Echeverria', 'Seung Joong Kim', 'John Von Dollen',
-               'Nicholas M Chesarino', 'Yuqing Feng', 'Clinton Yu', 'Hai Ta', 'Linda Chelico', 
-               'Lan Huang', 'John Gross', 'Andrej Sali', 'Nevan J Krogan']
-    po = IMP.pmi.mmcif.ProtocolOutput(open('A3G-CRL5-Vif_complex_flexible.cif', 'w'))
+    po = IMP.pmi.mmcif.ProtocolOutput(open('A3G-CRL5-Vif_complex_rigid.cif', 'w'))
     po.system.title = ('Integrative structure determination of the A3G-CRL5-Vif complex')
     bs.system.add_protocol_output(po)
     # Add publication
-    po.system.citations.append(ihm.Citation(pmid='000',
-                                            title=title,
-                                            journal='Molecular & Celullar Proteomics',
-                                            authors=authors,
-                                            volume='NA',
-                                            page_range='NA',
-                                            year='2021',
-                                            doi='10.1016/j.mcpro.2021.100132'))
+    #po.system.citations.append(ihm.Citation.from_pubmed_id(28821611))
 
 ##############################
 # Build state
@@ -97,22 +68,6 @@ bs.add_state(reader_spec1)
 hier,  dof = bs.execute_macro(max_rb_trans=3.0,
                                           max_rb_rot=0.03)
 mols = bs.get_molecules()[0]
-
-if include_Occams:
-    bs_spec2.add_state(reader_spec2)
-
-    hier_S2,  dof_S2 = bs_spec2.execute_macro(max_rb_trans=3.0,
-                                              max_rb_rot=0.03)
-    mols_S2 = bs_spec2.get_molecules()[0]
-
-    # Combined hierarchy
-    p = IMP.Particle(mdl)
-    hier_all = IMP.atom.Hierarchy.setup_particle(p)
-    hier_all.add_child(hier)
-    hier_all.add_child(hier_S2)
-    hier_all.set_name('System')
-
-    states = IMP.atom.get_by_type(hier_all,IMP.atom.STATE_TYPE)
 
 
 ##############################
@@ -153,66 +108,23 @@ cldbkc.set_protein2_key("Protein2")
 cldbkc.set_residue1_key("AbsPos1")
 cldbkc.set_residue2_key("AbsPos2")
 cldbkc.set_unique_id_key("Id")
-cldbkc.set_psi_key("Score")
+#cldbkc.set_psi_key("Score")
 
 # XLs RESTRAINT
 cldb=IMP.pmi.io.crosslink.CrossLinkDataBase(cldbkc)
-cldb.create_set_from_file(top_dir+"data/Interlinks_A3G_Vif_CRL5_unique_modeling_noA3G.csv")
+cldb.create_set_from_file(top_dir+"data/Interlinks_A3G_Vif_CRL5_unique_modeling.csv")
 
 xl1 = IMP.pmi.restraints.crosslinking.CrossLinkingMassSpectrometryRestraint(root_hier=hier,
                                                                             CrossLinkDataBase=cldb,
                                                                             resolution=1.0,
                                                                             length=26.0,
-                                                                            slope=0.001,
-									    label='noA3G')
+                                                                            slope=0.015)
 xl1.add_to_model()
-xl1.set_weight(2.0)
+xl1.set_weight(1.5)
 
 rmf_restraints.append(xl1)
 output_objects.append(xl1)
 dof.get_nuisances_from_restraint(xl1)
-
-
-cldb=IMP.pmi.io.crosslink.CrossLinkDataBase(cldbkc)
-cldb.create_set_from_file(top_dir+"data/Interlinks_A3G_Vif_CRL5_unique_modeling_A3G.csv")
-
-xl2 = IMP.pmi.restraints.crosslinking.CrossLinkingMassSpectrometryRestraint(root_hier=hier,
-                                                                            CrossLinkDataBase=cldb,
-                                                                            resolution=1.0,
-                                                                            length=26.0,
-									    label='A3G')
-xl2.add_to_model()
-xl2.set_weight(15.0)
-
-rmf_restraints.append(xl2)
-output_objects.append(xl2)
-dof.get_nuisances_from_restraint(xl2)
-
-##############################
-# Occams Spring restaint
-##############################
-if include_Occams:
-    occ = IMP.pmi.restraints.occams.OccamsRestraint(hier,
-                                                    hier_S2,
-                                                    'equiv_assis_s0_s1.dat',
-                                                    top_dir+'/data/alns',
-                                                    sample_sys_1 = False,
-                                                    sigma_init=5.0,
-                                                    slope=0.01,
-                                                    psi_nuisances_are_optimized=True,
-                                                    sigma_nuisances_are_optimized=True)
-    occ.add_to_model()
-    occ.set_weight(10.0)
-    occ.write_distances('')
-    rmf_restraints.append(occ)
-    output_objects.append(occ)
-
-    print('nuisances:', occ.get_particles_to_sample())
-    dof.get_nuisances_from_restraint(occ)
-
-    socc = occ.get_output()
-    print(socc)
-
 
 #####################################################
 # Distance restraints for A3G-Vif
@@ -223,14 +135,14 @@ if include_amg_distance_restraint == True:
                                                                     ('A3G',126,132,'Vif'),
                                                                     label = 'A124')
     br1.add_to_model()
-    br1.set_weight(5.0)
+    br1.set_weight(8.0)
     output_objects.append(br1)
 
     br2 = IMP.pmi.restraints.residue_binding.ResidueBindingRestraint(hier,
                                                                     ('Vif',40,45,'A3G'),
                                                                     label = 'V26')
     br2.add_to_model()
-    br2.set_weight(5.0)
+    br2.set_weight(8.0)
     output_objects.append(br2)
 
     
@@ -242,7 +154,7 @@ if include_amg_distance_restraint == True:
 
 IMP.pmi.tools.shuffle_configuration(hier,
                                     max_translation=60)
-
+#                                    bounding_box=((-100,-100,-100),(100,100,150)))
 dof.optimize_flexible_beads(200)
 ############################# SAMPLING ##############################
 # Run replica exchange Monte Carlo sampling
@@ -301,26 +213,28 @@ if '--mmcif' in sys.argv:
     
     # Correct number of output models to account for multiple runs
     protocol = po.system.orphan_protocols[-1]
-    protocol.steps[-1].num_models_end = 203100
+    protocol.steps[-1].num_models_end = 2007800
 
     # Get last protocol in the file
     protocol = po.system.orphan_protocols[-1]
-    # State that we filtered 
+    # State that we filtered the 200000 frames down to one cluster of
+    # 9999 models:
     analysis = ihm.analysis.Analysis()
     protocol.analyses.append(analysis)
     analysis.steps.append(ihm.analysis.ClusterStep(
-                            feature='RMSD', num_models_begin=3000000,
-                            num_models_end=203100))
+                            feature='RMSD', num_models_begin=200000,
+                            num_models_end=9999))
+    
     
     # Create an ensemble for the cluster
     e = po._add_simple_ensemble(analysis.steps[-1],
-                                name="Cluster 0", num_models=198632,
-                                drmsd=19.85, num_models_deposited=1,
+                                name="Cluster 0", num_models=9999,
+                                drmsd=8.3, num_models_deposited=1,
                                 localization_densities={}, ensemble_file=None)
     
     # Add the model from RMF
     rh = RMF.open_rmf_file_read_only(
-        '../results/model_flexible/clustering_flexible/cluster.0/cluster_center_model.rmf')
+        '../results/model_rigid/clustering_rigid/cluster.0/cluster_center_model.rmf3')
     IMP.rmf.link_hierarchies(rh, [hier])
     IMP.rmf.load_frame(rh, RMF.FrameID(0))
     del rh
@@ -330,7 +244,7 @@ if '--mmcif' in sys.argv:
     # Look up the ihm.AsymUnit corresponding to a PMI component name
     for asym in po.asym_units:
         name = asym.split('.')[0]
-        fname = f'../results/model_flexible/clustering_flexible/cluster.0/LPD_{name}_orie.mrc'
+        fname = f'../results/model_rigid/clustering_rigid/cluster.0/LPD_{name}_orie.mrc'
         print('fname', fname)
         loc = ihm.location.OutputFileLocation(fname)
         den = ihm.model.LocalizationDensity(file=loc, asym_unit=po.asym_units[asym])

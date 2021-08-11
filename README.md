@@ -19,10 +19,9 @@ Integrative structure determination of the A3G-CRL5-Vif-CBFβ complex based on t
 
 _License_: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.
 
-_Publications_: A cross-linking mass spectrometry pipeline for integrative modeling of host-pathogen complexes: A3G-VifHIV-1-CRL5-CBFβ structure
+_Publications_: Characterization of a A3G-Vif<sub>HIV-1</sub>-CRL5-CBFβ structure using a cross-linking mass spectrometry pipeline for integrative modeling of host-pathogen complexes. Robyn M. Kaake, Ignacia Echeverria, Seung Joong Kim, John Von Dollen, Nicholas M. Chesarino, Yuqing Feng, Clinton Yu, Hai Ta, Linda Chelico, Lan Huang, John Gross, Andrej Sali, Nevan J. Krogan, DOI:https://doi.org/10.1016/j.mcpro.2021.100132
 
 
 
 ```
 
-```

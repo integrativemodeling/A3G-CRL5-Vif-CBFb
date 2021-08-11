@@ -13,11 +13,14 @@
 |EloC |plum           |EloC.fasta |EloC |BEADS         |C|1,16   |0  |5  |  |1 |   | ||
 |EloC |plum           |EloC.fasta |EloC |CRL5_mod.pdb  |C|17,END |0  |1  |  |1 |   | ||
 
-|CUL5 |gold           |Cul5.fasta |Cul5 |CRL5_mod.pdb  |A|1,302  |0  |1  |  |1 |   | ||
-|CUL5 |gold           |Cul5.fasta |Cul5 |BEADS         | |303,307|0  |1  |  |  |   | ||
+|CUL5 |gold           |Cul5.fasta |Cul5 |BEADS         | |1,10   |0  |1  |  |1 |   | ||
+|CUL5 |gold           |Cul5.fasta |Cul5 |CRL5_mod.pdb  |A|11,118 |0  |1  |  |1 |   | ||
+|CUL5 |gold           |Cul5.fasta |Cul5 |BEADS         | |119,132|0  |1  |  |1 |   | ||
+|CUL5 |gold           |Cul5.fasta |Cul5 |CRL5_mod.pdb  |A|133,302|0  |1  |  |1 |   | ||
+|CUL5 |gold           |Cul5.fasta |Cul5 |BEADS         | |303,307|0  |1  |  |1 |   | ||
 |CUL5 |gold           |Cul5.fasta |Cul5 |CRL5_mod.pdb  |A|308,382|0  |1  |  |1 |   | ||
-|CUL5 |gold           |Cul5.fasta |Cul5 |BEADS         | |383,404|0  |1  |  |  |   | ||
-|CUL5 |gold           |Cul5.fasta |Cul5 |CRL5_mod.pdb  |A|405,END|0  |1  |  |1 |   | ||
+|CUL5 |gold           |Cul5.fasta |Cul5 |BEADS         | |383,404|0  |1  |  |1 |   | ||
+|CUL5 |gold           |Cul5.fasta |Cul5 |CRL5_mod.pdb  |A|405,780|0  |1  |  |1 |   | ||
 
 |Rbx2 |orange         |Rbx2.fasta |Rbx2 |BEADS         | |1,26   |0  |5  |  |  |   | ||
 |Rbx2 |orange         |Rbx2.fasta |Rbx2 |CRL5_mod.pdb  |F|27,END |0  |1  |  |1 |   | ||

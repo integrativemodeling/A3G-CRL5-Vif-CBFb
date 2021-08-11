@@ -1,6 +1,5 @@
 module load cuda/7.5.18
 module load python/scipy
-#module load python/numpy
 module load python2/numpy/1.14.1
 module load python/pyrmsd
 module load imp-fast
@@ -17,4 +16,4 @@ cp $mod_dir/sample_B.txt $mod_dir/Scores_B.txt
 ls -lta $analys_dir/GSMs_cl-1/sample_A | awk '{print $9}' | grep 'rmf3' > $analys_dir/selected_models_A_cluster-1_random.dat
 ls -lta $analys_dir/GSMs_cl-1/sample_B | awk '{print $9}' | grep 'rmf3' > $analys_dir/selected_models_B_cluster-1_random.dat
 
-nohup  python ~/SOFTW/imp-sampcon/pyext/src/Master_Sampling_Exhaustiveness_Analysis.py --sysname $name --path $mod_dir --mode cuda --align --density density.txt --gridsize 10.0 --gnuplot --scoreA Scores_A.txt --scoreB Scores_B.txt  --rmfs_A $analys_dir/selected_models_A_cluster-1_random.dat --rmfs_B $analys_dir/selected_models_B_cluster-1_random.dat --subsample 20000 > clustering.log &
+nohup  python ~/SOFTW/imp-sampcon/pyext/src/Master_Sampling_Exhaustiveness_Analysis.py --sysname $name --path $mod_dir --mode cuda --align --density density.txt --gridsize 2.0 --gnuplot --scoreA Scores_A.txt --scoreB Scores_B.txt  --rmfs_A $analys_dir/selected_models_A_cluster-1_random.dat --rmfs_B $analys_dir/selected_models_B_cluster-1_random.dat --subsample 20000 > clustering.log &
