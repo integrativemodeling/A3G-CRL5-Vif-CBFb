@@ -1,7 +1,7 @@
 title: Integrative structures of the A3G-CRL5-Vif-CBFb complex
 tags: [chemical crosslinks, PMI, X-ray, MODELLER]
 prereqs: [python/numpy, python/pandas, modeller]
-accessions: [PDBDEV_000000XX]
+accessions: [PDBDEV_00000090, PDBDEV_00000091]
 pmid: 34389466
 test:
     runtime: 24h
