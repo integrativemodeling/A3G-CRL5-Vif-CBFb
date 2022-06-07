@@ -75,7 +75,7 @@ if '--mmcif' in sys.argv:
     authors = ['Robyn M Kaake', 'Ignacia Echeverria', 'Seung Joong Kim', 'John Von Dollen',
                'Nicholas M Chesarino', 'Yuqing Feng', 'Clinton Yu', 'Hai Ta', 'Linda Chelico', 
                'Lan Huang', 'John Gross', 'Andrej Sali', 'Nevan J Krogan']
-    po = IMP.pmi.mmcif.ProtocolOutput(open('A3G-CRL5-Vif_complex_flexible.cif', 'w'))
+    po = IMP.pmi.mmcif.ProtocolOutput()
     po.system.title = ('Integrative structure determination of the A3G-CRL5-Vif complex')
     bs.system.add_protocol_output(po)
     # Add publication
@@ -160,10 +160,11 @@ cldb=IMP.pmi.io.crosslink.CrossLinkDataBase(cldbkc)
 cldb.create_set_from_file(top_dir+"data/Interlinks_A3G_Vif_CRL5_unique_modeling_noA3G.csv")
 
 xl1 = IMP.pmi.restraints.crosslinking.CrossLinkingMassSpectrometryRestraint(root_hier=hier,
-                                                                            CrossLinkDataBase=cldb,
+                                                                            database=cldb,
                                                                             resolution=1.0,
                                                                             length=26.0,
                                                                             slope=0.001,
+                                                                            linker=ihm.cross_linkers.dsso,
 									    label='noA3G')
 xl1.add_to_model()
 xl1.set_weight(2.0)
@@ -177,9 +178,10 @@ cldb=IMP.pmi.io.crosslink.CrossLinkDataBase(cldbkc)
 cldb.create_set_from_file(top_dir+"data/Interlinks_A3G_Vif_CRL5_unique_modeling_A3G.csv")
 
 xl2 = IMP.pmi.restraints.crosslinking.CrossLinkingMassSpectrometryRestraint(root_hier=hier,
-                                                                            CrossLinkDataBase=cldb,
+                                                                            database=cldb,
                                                                             resolution=1.0,
                                                                             length=26.0,
+                                                                            linker=ihm.cross_linkers.dsso,
 									    label='A3G')
 xl2.add_to_model()
 xl2.set_weight(15.0)
@@ -292,13 +294,6 @@ if '--mmcif' in sys.argv:
     s = po.system
     print("restraint datasets:", [r.dataset for r in s.restraints])
     
-    # Datasets for XL-MS restraint
-    for r in s.restraints:
-        if isinstance(r, ihm.restraint.CrossLinkRestraint):
-            r.linker = ihm.cross_linkers.dsso
-            print("XL-MS dataset at:", r.dataset.location.path)
-            print("Details:", r.dataset.location.details)
-    
     # Correct number of output models to account for multiple runs
     protocol = po.system.orphan_protocols[-1]
     protocol.steps[-1].num_models_end = 203100
@@ -407,8 +402,6 @@ if '--mmcif' in sys.argv:
     #po.system.update_locations_in_repositories(repos)
     
     
-    po.flush()
-
-
-
-
+    po.finalize()
+    with open('A3G-CRL5-Vif_complex_flexible.cif', 'w'):
+        ihm.dumper.write(fh, [po.system])
