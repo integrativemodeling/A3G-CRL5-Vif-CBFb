@@ -1,5 +1,6 @@
 from modeller import *
 from modeller.automodel import *
+import sys
 
 # Override the 'special_restraints' and 'user_after_single_model' methods:
 
@@ -19,6 +20,8 @@ a = MyModel(env, alnfile='aln_cter.pir', knowns=('3v4k_A'),sequence='A3G_cter',a
 
 a.starting_model = 1
 a.ending_model = 25
+if '--test' in sys.argv: a.ending_model = 1
+
 a.make()                           # do comparative modeling
 
 

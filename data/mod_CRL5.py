@@ -1,5 +1,6 @@
 from modeller import *
 from modeller.automodel import *
+import sys
 
 # Override the 'special_restraints' and 'user_after_single_model' methods:
 
@@ -32,6 +33,7 @@ a = MyModel(env, alnfile='aln_CRL5.pir', knowns=('4N9F_CDEFG','1ldj','2ECL_A','2
 
 a.starting_model = 1
 a.ending_model = 50
+if '--test' in sys.argv: a.ending_model = 1
 
 a.loop.starting_model = 1           # First loop model
 a.loop.ending_model   = 2           # Last loop model
