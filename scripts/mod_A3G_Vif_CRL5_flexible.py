@@ -255,7 +255,6 @@ if '--mmcif' in sys.argv or '--test' in sys.argv:
 
 rex=IMP.pmi.macros.ReplicaExchange0(mdl,
                                     root_hier=hier,                          
-                                    crosslink_restraints=rmf_restraints,           
                                     monte_carlo_sample_objects=dof.get_movers(),
                                     replica_exchange_maximum_temperature=3.0,
                                     global_output_directory="output/",
